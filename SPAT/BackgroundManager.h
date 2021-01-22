@@ -1,8 +1,11 @@
 #pragma once
 #include "Background.h"
 #include "GuiDrawable.h"
-#include "vector"
+#include <vector>
+#include <utility>
 #include "ImGui/imgui.h"
+#include <string>
+#include <memory>
 
 class BackgroundManager final: public GuiDrawable
 {
@@ -23,7 +26,7 @@ public:
 	void onGuiDraw() override
 	{
 		std::string names;
-		for (auto && [name, back] : backgrounds)
+		for (auto& [name, back] : backgrounds)
 		{
 			names += name + '\0';
 		}

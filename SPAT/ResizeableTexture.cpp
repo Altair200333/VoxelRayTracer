@@ -1,4 +1,5 @@
 #include "ResizeableTexture.h"
+#include <iterator>
 
 uint8_t* ResizeableTexture::data()
 {

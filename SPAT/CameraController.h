@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-
+#include <algorithm>
 #include "Component.h"
 #include "Input.h"
 #include "Transform.h"
@@ -10,6 +10,7 @@
 #include "OnUpdateSubscriber.h"
 #include "Profiler.h"
 #include "ImGui/imgui.h"
+
 class CameraController final: public Component, public virtual OnUpdateSubscriber, public virtual GuiDrawable
 {
 	//contained vector represents amount of movement in each direction
@@ -69,8 +70,8 @@ inline void CameraController::onUpdate()
 	{
 		hasMoved = true;
 
-		camera->yaw += MouseInput::dx() * mouseSensitivity * Profiler::frameTime();
-		camera->pitch += MouseInput::dy() * mouseSensitivity * Profiler::frameTime();
+		camera->yaw += static_cast<float>(MouseInput::dx()) * mouseSensitivity * Profiler::frameTime();
+		camera->pitch += static_cast<float>(MouseInput::dy()) * mouseSensitivity * Profiler::frameTime();
 
 		// Make sure that when pitch is out of bounds, screen doesn't get flipped
 		camera->pitch = std::clamp(camera->pitch, -89.0f, 89.0f);

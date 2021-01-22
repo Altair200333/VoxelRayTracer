@@ -4,6 +4,7 @@
 #include <glm/ext/scalar_constants.hpp>
 
 #include "DirectionalLight.h"
+#include <memory>
 
 class SkyBackground final: public Background
 {
