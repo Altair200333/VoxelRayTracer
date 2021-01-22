@@ -1,4 +1,5 @@
 #include "RenderManager.h"
+#include "RandomSampledRenderer.h"
 
 
 RenderManager::RenderManager(std::shared_ptr<Scene> _scene): scene(_scene)

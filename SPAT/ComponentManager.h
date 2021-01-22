@@ -7,7 +7,6 @@
 
 class ComponentManager final
 {
-	//sfinae alias to check whether T really is Component
 	template<typename T>
 	using isComponent = std::enable_if_t<std::is_base_of<Component, T>::value, int>;
 	

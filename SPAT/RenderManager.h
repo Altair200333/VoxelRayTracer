@@ -2,9 +2,7 @@
 #include <memory>
 #include <vector>
 
-#include "GuiSubscriber.h"
 #include "OpenGLRenderer.h"
-#include "RandomSampledRenderer.h"
 #include "SceneRenderer.h"
 
 class RenderManager final: virtual public GuiDrawable
