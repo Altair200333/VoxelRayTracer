@@ -9,7 +9,9 @@ void Logger::logMsg(const std::string& msg)
 	if (logs.size() > 20)
 		logs.pop_front();
 	logs.push_back(msg);
-
+	
+	if (stream)
+		stream << msg << "\n";
 	mtx.unlock();
 }
 
