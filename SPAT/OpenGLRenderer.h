@@ -3,6 +3,7 @@
 #include "SceneRenderer.h"
 #include "Shader.h"
 #include "SkyBackground.h"
+#include "Logger.h"
 
 class OpenGLRenderer final: public SceneRenderer
 {
@@ -31,7 +32,7 @@ public:
 
 	void fullscaleRender(ResizeableTexture& texture) override
 	{
-		
+		Logger::log("Render to image in openGL not available");
 	}
 
 	void onGuiDraw() override;
