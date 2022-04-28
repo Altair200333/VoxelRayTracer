@@ -7,6 +7,7 @@ Supports
 5. Various render settings
 6. ImGUI interface 
 
+see [small article](http://neo-web-page.ru/#/voxel_mixer)
 <hr>
 
 ### Screenshots
